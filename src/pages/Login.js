@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import OTPInput from '../components/OTPInput';
+import { Link } from 'react-router-dom';
 
 function Login() {
     const [name, setName] = useState('');
@@ -61,8 +62,9 @@ function Login() {
                             {otp ? <OTPInput /> : ''}
 
 
-
-                            <button type="submit" className='bg-[#089BAB] my-2  p-4 rounded-md font-bold w-full text-white'>Login</button>
+                            <Link to='/'>
+                                <button type="submit" className='bg-[#089BAB] my-2  p-4 rounded-md font-bold w-full text-white'>Login</button>
+                            </Link>
                         </form>
                     </div>
 

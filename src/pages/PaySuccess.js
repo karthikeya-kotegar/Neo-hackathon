@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function PaySuccess() {
     return (
@@ -33,8 +34,9 @@ function PaySuccess() {
 
                     </div>
 
-                    <button className='bg-[#089BAB] my-2  p-4 rounded-md font-bold w-full text-white'>Done</button>
-
+                    <Link to='/'>
+                        <button className='bg-[#089BAB] my-2  p-4 rounded-md font-bold w-full text-white'>Done</button>
+                    </Link>
                 </div>
             </div>
         </div>

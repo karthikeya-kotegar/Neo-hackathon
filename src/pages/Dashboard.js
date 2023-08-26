@@ -1,11 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Dashboard() {
     return (
         <div className='bg-[#dddfdd] h-full'>
             <div className='bg-[#A3A3A3] flex flex-row justify-between px-10'>
-                <img src='/ie-logo.png' />
-                <img src='/profile.png' className='p-4' />
+                <Link to='/'>
+                    <img src='/ie-logo.png' />
+                </Link>
+
+                <Link to='/login'>
+                    <img src='/profile.png' className='p-4' />
+                </Link>
             </div>
 
             <div className='px-14'>
@@ -15,10 +21,13 @@ function Dashboard() {
 
 
                 <div className='flex flex-row gap-8 my-4'>
-                    <div className='flex flex-col gap-2 justify-center items-center'>
-                        <img src='/send.png' />
-                        <div className='font-bold text-lg'>Send money</div>
-                    </div>
+                    <Link to='/send'>
+                        <div className='flex flex-col gap-2 justify-center items-center'>
+                            <img src='/send.png' />
+                            <div className='font-bold text-lg'>Send money</div>
+                        </div>
+                    </Link>
+
 
                     <div className='flex flex-col gap-2 justify-center items-center'>
                         <img src='/points.png' />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function SendToken() {
     const [formData, setFormData] = useState({
@@ -26,8 +27,13 @@ function SendToken() {
     return (
         <div className='bg-[#dddfdd] h-screen'>
             <div className='bg-[#A3A3A3] flex flex-row justify-between px-10'>
-                <img src='/ie-logo.png' />
-                <img src='/profile.png' className='p-4' />
+                <Link to='/'>
+                    <img src='/ie-logo.png' />
+                </Link>
+
+                <Link to='/login'>
+                    <img src='/profile.png' className='p-4' />
+                </Link>
             </div>
 
             <div className='px-14 flex flex-col justify-center items-center'>
@@ -81,8 +87,9 @@ function SendToken() {
                         />
                     </div>
 
-                    <button type="submit" className='bg-[#089BAB] my-8  p-4 rounded-md font-bold w-full text-white'>Send</button>
-
+                    <Link to='/success'>
+                        <button type="submit" className='bg-[#089BAB] my-8  p-4 rounded-md font-bold w-full text-white'>Send</button>
+                    </Link>
 
                 </form>
 
