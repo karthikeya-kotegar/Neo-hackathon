@@ -1,7 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { addToScript, getBalance, getProvider, initDapi, invokeMint, invokeMintNew, send, sendToken } from '../utils/Neo';
 
 function Dashboard() {
+
+    const initialiseNeo = async () => {
+        // setTimeout( initDapi, 5000);
+        initDapi();
+        // getProvider();
+        // getBalance();
+        // send("Ne6szxHuvk2LCHBTBJLf4XHXP4n1bmGSPf", "NPgmskezbTsjLgQ9Czy1VGQ7cNDM5KcPWH", "1")
+
+        // invokeMintNew("Ne6szxHuvk2LCHBTBJLf4XHXP4n1bmGSPf");
+        // addToScript()
+        // sendToken()
+    }
+
     return (
         <div className='bg-[#dddfdd] h-full'>
             <div className='bg-[#A3A3A3] flex flex-row justify-between px-10'>
@@ -12,6 +26,11 @@ function Dashboard() {
                 <Link to='/login'>
                     <img src='/profile.png' className='p-4' />
                 </Link>
+
+                <div>
+                    <button className='bg-[#089BAB] my-2  p-4 rounded-md font-bold w-full text-white' onClick={initialiseNeo}>Connect Wallet</button>
+                </div>
+
             </div>
 
             <div className='px-14'>

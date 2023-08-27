@@ -25,11 +25,11 @@ function PaySuccess() {
                         </div>
 
                         <div className='font-bold mb-4'>Amount Paid:
-                            <span className='p-2'> 350.50</span>
+                            <span className='p-2'> 2</span>
                         </div>
 
                         <div className='font-bold mb-4'>Address:
-                            <span className='p-2'> 0x27ad52099662e6736e79</span>
+                            <span className='p-2'> NPgmskezbTsjLgQ9Czy1VGQ7cNDM5KcPWH</span>
                         </div>
 
                     </div>

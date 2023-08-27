@@ -4,8 +4,16 @@ import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import PaySuccess from './pages/PaySuccess';
 import SendToken from './pages/SendToken';
+import { initDapi } from './utils/Neo';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    initDapi();
+
+  }, [])
+
   return (
     <Router>
       <Routes>

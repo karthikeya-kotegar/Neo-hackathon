@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { send } from '../utils/Neo';
+import { useNavigate } from "react-router-dom";
 
 function SendToken() {
     const [formData, setFormData] = useState({
@@ -7,6 +9,15 @@ function SendToken() {
         amount: '',
         note: ''
     });
+
+    const navigate = useNavigate();
+
+    // const send = async (from, to, amount) => {
+    //     // Implement your send logic here
+    //     // This is just a placeholder for the sake of example
+    //     // You might have an API call or other async operations
+    //     await new Promise(resolve => setTimeout(resolve, 1000));
+    // };
 
 
     const handleInputChange = (event) => {
@@ -20,7 +31,24 @@ function SendToken() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Form submitted with data:', formData);
+        send("Ne6szxHuvk2LCHBTBJLf4XHXP4n1bmGSPf", "NPgmskezbTsjLgQ9Czy1VGQ7cNDM5KcPWH", "1")
+
+        setTimeout(() => {
+            navigate("/success");
+          }, 10000);
     };
+
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault();
+    //     console.log('Form submitted with data:', formData);
+        
+    //     await send("NPgmskezbTsjLgQ9Czy1VGQ7cNDM5KcPWH", "Ne6szxHuvk2LCHBTBJLf4XHXP4n1bmGSPf", "1");
+        
+    //     // After the send function completes, navigate to another screen
+    //     // history.push('/another-screen'); // Replace '/another-screen' with your desired route
+
+    //     navigate("/success");
+    // };
 
 
 
@@ -87,9 +115,9 @@ function SendToken() {
                         />
                     </div>
 
-                    <Link to='/success'>
-                        <button type="submit" className='bg-[#089BAB] my-8  p-4 rounded-md font-bold w-full text-white'>Send</button>
-                    </Link>
+                    {/* <Link to='/success'> */}
+                        <button type="submit" className='bg-[#089BAB] my-8  p-4 rounded-md font-bold w-full text-white' >Send</button>
+                    {/* </Link> */}
 
                 </form>
 
